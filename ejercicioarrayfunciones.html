@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio array funciones</title>
+</head>
+<body>
+
+
+	<script>
+
+		//dos funciones que me pinten las posiciones pares y otras con las impares
+
+		var listaAlumnos = new Array();
+
+		listaAlumnos = ['Pablo', 'Alberto', 'Natalia', 'Patricia', 'Marta', 'Jorge'];
+
+		var alumnosCantidad = listaAlumnos.length
+		var listaHtml = '<ul>';
+
+		function alumnosPares()
+			{
+
+				var listaHtml = '<ul>';
+				for(var i = 0; i<listaAlumnos.length; i++)
+				{
+					if(i%2 == 0)
+					{
+						listaHtml += '<li>'+listaAlumnos[i]+'</li>';
+
+					}
+
+				}
+
+				listaHtml += '</ul>';
+
+		document.write(listaHtml)
+
+			}
+					
+
+		function alumnosImpares()
+			{
+
+				var listaHtml = '<ul>';
+				for(var i = 0; i<listaAlumnos.length; i++)
+				{
+					if(i%2 != 0)
+					{
+						listaHtml += '<li>'+listaAlumnos[i]+'</li>';
+
+					}
+
+				}
+
+				listaHtml += '</ul>';
+
+		document.write(listaHtml)
+
+			}
+
+
+
+		</script>
+
+
+	
+</body>
+</html>

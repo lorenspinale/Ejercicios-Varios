@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>array multidimensional cuyos objetos son json</title>
+</head>
+<body>
+		
+		<script>	//escuela
+
+		var alumno1 = {'nombre': 'Juan',
+						'apellido' : 'Perez',
+						'edad' : 36,
+						'notamedia' : 9}
+
+
+		var alumno2 = {'nombre': 'Adriana',
+						'apellido' : 'Gonzalez',
+						'edad' : 21,
+						'notamedia' : 10}
+
+
+		var alumno3 = {'nombre': 'Joaquin',
+						'apellido' : 'Alvarez',
+						'edad' : 30,
+						'notamedia' : 4.5}
+
+
+		var alumno4 = {'nombre': 'Almudena',
+						'apellido' : 'Rodriguez',
+						'edad' : 33,
+						'notamedia' : 2}
+
+		var listaAlumnos = new Array();
+
+		listaAlumnos = [alumno1, alumno4, alumno3, alumno2];
+
+		console.log(listaAlumnos);
+
+
+
+
+		/* for(var i=0; i<listaAlumnos.length; i++)
+		{
+			for(var key in listaAlumnos[i]) 
+			{
+				document.write(key + ": " + listaAlumnos[i][key] + " ") //<- listaAlumnos[i] pasado por ese for te da la lista de alumnos 0, que es alumno1 dentro de listaAlumnos, luego te enseña el alumno4, luego el alumno3 y despues el alumno2.
+			}
+			document.write('<br>');
+		}*/
+
+
+		for(var objeto of listaAlumnos)
+		{
+			for(var key in objeto) 
+			{
+				document.write(key + ": " + objeto[key] + " ") 
+			}
+			document.write('<br>');
+		}
+
+		</script>
+	
+</body>
+</html>

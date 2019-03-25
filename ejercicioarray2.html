@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio arrays</title>
+</head>
+<body>
+
+	<script>
+		
+	//pedir numeros por pantalla en bucle hasta que se escriba la palabra fin. El prompt debe reproducirse cuando y mientras no se ponga fin
+
+
+	var listaNumeros = new Array();
+	var contador = 0;
+	var numero;
+
+	do{
+
+		numero = prompt ('Dime un número o escribe la palabara fin');
+		numero = numero.toUpperCase();
+
+		if (numero!= "FIN")
+		{
+			listaNumeros[contador]= parseInt(numero);
+			contador++;
+		}
+		
+
+	}while(numero != 'FIN')
+
+	console.log(listaNumeros);
+
+	</script>
+	
+</body>
+</html>

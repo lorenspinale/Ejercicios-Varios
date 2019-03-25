@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		
+		var alumno1 = new Array();
+
+		alumno1 = {'nombre' : 'Adrian',
+					'edad' : 26,
+					'matricula' : 'AS345',
+					'estado' : true,
+					'asignaturas' : ['matematicas', 'lengua', 'fisica'], 
+					'notasdelasasignaturas': {'matematicas' : 9, 'lengua' : 4, 'fisica' : 5.6},
+				  } 
+
+		console.log(alumno1);
+
+		//como se lee - for(in) - recorre objetos. 
+
+		for (var descripcion in alumno1)
+		{
+			if(typeof(alumno1[descripcion]) == 'object' && descripcion == 'notasdelasasignaturas')
+			{
+				for(var notaasignatura in alumno1[descripcion])
+					{
+						document.write(notaasignatura + ": " + alumno1[descripcion][notaasignatura] + "<br>")
+					}
+			} else
+			{
+				document.write(descripcion + ": " + alumno1[descripcion] + "<br>")
+			}
+		}
+
+
+	</script>
+</body>
+</html>
